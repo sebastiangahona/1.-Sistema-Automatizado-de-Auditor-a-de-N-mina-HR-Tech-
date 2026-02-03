@@ -101,6 +101,10 @@ python main.py --generate --audit
 python gui_app.py
 ```
 
+**Vista Previa de la Interfaz:**
+
+![GUI Interfaz](https://github.com/user-attachments/assets/49669ad8-1aa2-4c65-929e-3716c56563c9)
+
 **Características de la GUI:**
 - 🎨 **Diseño Modern Enterprise**: Dark mode con acentos azul BUK
 - 📱 **Navegación Intuitiva**: Menú lateral con botones grandes
