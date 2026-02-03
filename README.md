@@ -49,7 +49,9 @@ Sistema-Auditoria-Nomina/
 ├── generator.py    # Generador de datos de prueba con errores intencionales
 ├── auditor.py      # Motor de auditoría con lógica de negocio
 ├── reporter.py     # Generador de reportes profesionales
-├── main.py         # Orquestador principal
+├── main.py         # Orquestador principal (CLI)
+├── gui_app.py      # Interfaz gráfica moderna (GUI)
+├── build_exe.py    # Script para crear ejecutable
 └── requirements.txt # Dependencias del proyecto
 ```
 
@@ -59,6 +61,8 @@ Sistema-Auditoria-Nomina/
 - **Pandas**: Procesamiento de datos
 - **Matplotlib/Seaborn**: Visualización de datos
 - **XlsxWriter**: Exportación Excel con formato
+- **CustomTkinter**: Interfaz gráfica moderna (GUI)
+- **PyInstaller**: Empaquetado como ejecutable standalone
 - **ReportLab**: Generación de PDFs (preparado para expansión)
 
 ---
@@ -88,7 +92,35 @@ python main.py --generate --audit
 
 ## 💻 Uso del Sistema
 
-### Opción 1: Auditoría Completa (Generación + Auditoría)
+### 🖥️ Interfaz Gráfica (GUI) - **NUEVO**
+
+**La forma más fácil de usar el sistema:**
+
+```bash
+# Ejecutar aplicación con interfaz gráfica
+python gui_app.py
+```
+
+**Características de la GUI:**
+- 🎨 **Diseño Modern Enterprise**: Dark mode con acentos azul BUK
+- 📱 **Navegación Intuitiva**: Menú lateral con botones grandes
+- 📊 **Tarjetas KPI**: Visualización de métricas clave
+- 🎯 **Workflow Guiado**: Carga → Audita → Genera reportes
+- 🔴🟠🟡 **Alertas con Colores**: Severidad visual (crítica/alta/media)
+
+**Crear Ejecutable .exe (Windows):**
+```bash
+python build_exe.py
+# Resultado: dist/AuditorNomina.exe (sin necesidad de Python)
+```
+
+📖 **Ver [GUI_GUIDE.md](GUI_GUIDE.md) para guía detallada**
+
+---
+
+### ⌨️ Línea de Comandos (CLI)
+
+#### Opción 1: Auditoría Completa (Generación + Auditoría)
 
 ```bash
 python main.py --generate --audit
@@ -100,13 +132,13 @@ Esto:
 3. Ejecuta auditoría completa
 4. Genera reportes en carpeta `reports/`
 
-### Opción 2: Solo Generar Datos de Prueba
+#### Opción 2: Solo Generar Datos de Prueba
 
 ```bash
 python main.py --generate --employees 100
 ```
 
-### Opción 3: Auditar Archivo Existente
+#### Opción 3: Auditar Archivo Existente
 
 ```bash
 python main.py --file mi_nomina.csv

@@ -23,6 +23,9 @@ wheels/
 .installed.cfg
 *.egg
 
+# PyInstaller
+*.spec
+
 # Data files (sensitive information)
 *.csv
 *.xlsx
